@@ -1,187 +1,216 @@
-# Kanshin Ledger - Blockchain Governance Platform Tech Stack
+# Kanshin Ledger: Blockchain-Enabled Citizen Governance Platform with Transparent Feedback
 
-## 🏛️ Blockchain Infrastructure
-- **Ethereum/Polygon** - Permissioned blockchain network
-- **Solidity ^0.8.0** - Smart contract development
-- **Hardhat** - Development environment & testing framework
-- **OpenZeppelin** - Secure smart contract libraries
-- **Ganache** - Local blockchain simulation (development)
-- **Metamask** - Wallet integration for testing
+> **Status: Conceptual Framework** - Currently in brainstorming and design phase
 
-## 🔐 Identity & Privacy Stack  
-- **W3C DID (Decentralized Identity)** - Self-sovereign identity
-- **ZoKrates** - Zero-knowledge proof toolkit
-- **Ceramic Network** - Decentralized data network for DIDs
-- **IPFS** - Distributed storage for large attachments
-- **Veramo SDK** - DID and verifiable credentials framework
+The Kanshin Ledger is a conceptual blockchain-powered platform designed to enhance transparency, accountability, and citizen participation in local governance, particularly tailored for the Philippine context. This project addresses critical gaps in traditional feedback mechanisms by leveraging decentralized technologies to create a trustworthy and privacy-preserving citizen engagement system.
 
-## 💻 Frontend Development
-- **Next.js 14** (App Router) - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling framework
-- **Framer Motion** - Animations
-- **React Hook Form + Zod** - Form validation
-- **Web3.js/Ethers.js** - Blockchain interaction
-- **Wagmi** - React hooks for Ethereum
+## Table of Contents
 
-## ⚙️ Backend Services
-- **Node.js** - Runtime environment  
-- **Express.js** - API server
-- **PostgreSQL** - Off-chain data storage
-- **Prisma** - Database ORM
-- **Redis** - Caching and session management
-- **Bull Queue** - Background job processing
+- [Problem Statement](#problem-statement)
+- [Solution Overview](#solution-overview)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Technology Stack](#technology-stack)
+- [Core Components](#core-components)
+- [Objectives](#objectives)
+- [Legal & Ethical Compliance](#legal--ethical-compliance)
+- [Current Status](#current-status)
+- [Future Roadmap](#future-roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
-## 🔧 Development Tools
-- **Docker** - Containerization
-- **GitHub Actions** - CI/CD pipeline
-- **ESLint + Prettier** - Code formatting
-- **Jest + Mocha** - Testing frameworks
-- **Slither** - Smart contract security analysis
+## Problem Statement
 
-## 📊 Analytics & Monitoring
-- **The Graph** - Blockchain data indexing
-- **Subgraph Studio** - Custom data queries
-- **Tenderly** - Smart contract monitoring
-- **Sentry** - Error tracking
-- **Mixpanel** - User analytics
+Traditional citizen feedback systems in the Philippines face significant challenges:
 
-## 🌐 Deployment & Infrastructure
-- **Vercel** - Frontend hosting
-- **Railway/Render** - Backend services
-- **Alchemy/Infura** - Ethereum node provider
-- **Pinata** - IPFS pinning service
-- **Let's Encrypt** - SSL certificates
+### Trust and Transparency Issues
+- Citizens mistrust digital feedback systems due to fears of data manipulation
+- Lack of audit trails for submissions
+- Potential for unauthorized modifications or deletions by administrators
 
-## 🛡️ Security & Compliance
-- **MythX** - Smart contract security scanner
-- **OpenZeppelin Defender** - Smart contract operations
-- **Rate limiting** (express-rate-limit)
-- **Input sanitization** (DOMPurify)
-- **CORS** configuration
-- **Helmet.js** - Security headers
+### Privacy Concerns
+- Users hesitate to report issues due to identity exposure risks
+- Fear of reprisal or social stigma when criticizing public officials
+- Insufficient protection of personal identifiable information (PII)
 
-## 📱 Mobile Support
-- **Progressive Web App (PWA)** - Mobile-first design
-- **Web3Modal** - Multi-wallet support
-- **WalletConnect** - Mobile wallet integration
-- **Push notifications** (OneSignal)
+### Inefficient Data Processing
+- Unstructured feedback formats requiring manual consolidation
+- Delayed decision-making processes
+- Limited real-time insights for Local Government Units (LGUs)
 
-## 🔍 Legal & Compliance Tools
-- **Natural Language Processing** - Content moderation
-- **Profanity filter** - Automated screening
-- **Geo-tagging validation** - Evidence verification
-- **Audit logging** - Compliance tracking
-- **GDPR/RA 10173 compliance** modules
+## Solution Overview
 
-## 📋 Key Features Implementation
+The Kanshin Ledger framework addresses these challenges through four core elements:
 
-### Smart Contracts Architecture
-```solidity
-// Core contracts needed:
-- FeedbackRegistry.sol      // Main feedback storage
-- ReputationScoring.sol     // Automated scoring engine  
-- IdentityVerifier.sol      // DID verification
-- ModerationEngine.sol      // Content filtering
-- GovernanceToken.sol       // Platform governance
+### 1. Immutable Feedback Records
+Every citizen submission is anchored on a permissioned blockchain, creating an indelible, time-stamped, and cryptographically secured log accessible to all stakeholders.
+
+### 2. Pseudonymous Reporting
+Utilizes Decentralized Identity (DID) frameworks and Zero-Knowledge Proofs (ZKP) to enable users to prove eligibility (e.g., residency) without revealing personal information.
+
+### 3. Smart-Contract Reputation Scoring
+On-chain algorithms automatically weight and aggregate evidence-backed feedback into quantitative reputation scores for public officials, providing continuous performance metrics.
+
+### 4. Legal-Ethical Safeguards
+Embedded logic ensures compliance with Philippine laws (RA 10175, RA 10173) while flagging potentially problematic content for decentralized review.
+
+## Key Features
+
+- **Tamper-Proof Records**: Immutable blockchain-based storage ensuring data integrity
+- **Privacy Protection**: Pseudonymous reporting via DID and ZKP technologies
+- **Automated Metrics**: Smart contracts calculate real-time performance scores
+- **Legal Compliance**: Built-in adherence to Cybercrime Prevention Act and Data Privacy Act
+- **Evidence Support**: Geotagged photos and document uploads for substantiated reports
+- **Mobile-First Design**: Responsive UI following Material Design principles
+
+## Architecture
+
+The Kanshin Ledger employs a modular, layered architecture:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Presentation Layer                       │
+│              Next.js + React + Tailwind CSS                 │
+├─────────────────────────────────────────────────────────────┤
+│                    Application Layer                        │
+│                 Node.js + Express.js API                    │
+├─────────────────────────────────────────────────────────────┤
+│                      Data Layer                             │
+│           Firebase (Firestore + Storage + Auth)             │
+├─────────────────────────────────────────────────────────────┤
+│                Blockchain Simulation Layer                  │
+│        Custom Node.js + Crypto Module Implementation        │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Zero-Knowledge Proof Components
-- **Residency verification** without revealing address
-- **Age verification** without revealing birth date
-- **Eligibility proofs** for specific feedback categories
-- **Anonymous voting** on flagged content
+## Technology Stack
 
-### Decentralized Identity Flow
-1. User generates DID with W3C standard
-2. Verifiable credentials issued by trusted entities
-3. ZK proofs validate eligibility without data exposure
-4. Pseudonymous interaction with smart contracts
+### Frontend
+- **Next.js 14+** - React framework for production
+- **React 18+** - UI library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Chart.js** - Data visualization
 
-## 💰 Cost Analysis
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web application framework
 
-### Development Phase (FREE/Low Cost)
-| Service | Free Tier | Notes |
-|---------|-----------|--------|
-| **Hardhat** | ✅ FREE | Local development |
-| **Ganache** | ✅ FREE | Local blockchain |
-| **ZoKrates** | ✅ FREE | ZK proof toolkit |
-| **IPFS** | ✅ FREE | Distributed storage |
-| **Vercel** | ✅ FREE | Frontend hosting |
-| **GitHub Actions** | 🆓 2000 min/month | CI/CD |
+### Database & Storage
+- **Firebase Firestore** - NoSQL document database
+- **Firebase Storage** - File storage service
+- **Firebase Authentication** - User authentication
 
-### Production Deployment
-| Service | Cost | Usage |
-|---------|------|--------|
-| **Polygon Network** | ~$0.01 per tx | Smart contract calls |
-| **Alchemy/Infura** | $199/month | Production API calls |
-| **Pinata IPFS** | $20/month | File storage/pinning |
-| **Railway** | $20/month | Backend hosting |
-| **The Graph** | $100+/month | Indexing queries |
+### Blockchain Simulation
+- **Custom Node.js Implementation** - SHA-256 cryptographic hashing
+- **crypto-js/sha256** - Cryptographic functions
 
-### Smart Contract Gas Costs (Polygon)
-- Deploy contracts: ~$50-100
-- Feedback submission: ~$0.01-0.05
-- Reputation update: ~$0.02-0.08
-- Identity verification: ~$0.03-0.10
+### Identity & Privacy (Conceptual)
+- **W3C DID Standard** - Decentralized identity simulation
+- **ZoKrates** - Zero-knowledge proof framework (conceptual)
 
-## 🎯 Development Phases
+### Development Tools
+- **Git** - Version control
+- **GitHub Actions** - CI/CD pipeline
+- **Visual Studio Code** - IDE
+- **npm/yarn** - Package management
 
-### Phase 1: Core Infrastructure (2-3 months)
-- Smart contract development & testing
-- DID integration with ZK proofs
-- Basic frontend interface
-- Local blockchain deployment
+## Core Components
 
-### Phase 2: Advanced Features (2-3 months)
-- Reputation scoring algorithms
-- Content moderation system
-- IPFS file handling
-- Mobile PWA optimization
+### 1. Feedback Submission Module
+- Blockchain-anchored submission recording
+- Evidence attachment capabilities
+- Real-time validation and processing
 
-### Phase 3: Production Ready (1-2 months)
-- Security audits & testing
-- Legal compliance validation
+### 2. Identity Management System
+- DID-based pseudonymous authentication
+- ZKP-enabled eligibility verification
+- Privacy-preserving user management
+
+### 3. Reputation Scoring Engine
+- Smart contract-based algorithm
+- Evidence-weighted scoring system
+- Real-time performance metrics
+
+### 4. Compliance & Moderation System
+- Automated content flagging
+- Legal framework adherence
+- Decentralized review processes
+
+## Objectives
+
+This conceptual framework aims to:
+
+- **Architect** a blockchain-based feedback system guaranteeing tamper-proof recording
+- **Integrate** decentralized identity methods for pseudonymous yet auditable authentication
+- **Design** an algorithmic reputation-scoring engine encoded in smart contracts
+- **Outline** methods for assessing system usability, performance, and legal compliance
+
+## Legal & Ethical Compliance
+
+The platform is designed to comply with key Philippine legislation:
+
+- **Republic Act 10175 (Cybercrime Prevention Act)** - Cybersecurity and digital crime prevention
+- **Republic Act 10173 (Data Privacy Act)** - Personal data protection and privacy rights
+
+## Current Status
+
+**Conceptual Phase**: The Kanshin Ledger is currently in the brainstorming and design phase. Detailed software design documents have been developed, including:
+
+- Wireframing and user flow diagrams
+- Use case and activity diagrams
+- Functional decomposition analysis
+- Class diagrams and system architecture
+
+**The application is not yet developed.**
+
+## Future Roadmap
+
+### Phase 1: Development
+- Full-scale implementation of conceptualized features
+- Core platform development and testing
+
+### Phase 2: Pilot Deployment
+- Live deployment in real barangay settings
+- User acceptance testing with diverse groups
 - Performance optimization
-- Barangay pilot deployment
 
-## 🔒 Security Considerations
+### Phase 3: Scale & Enhancement
+- Comprehensive performance benchmarking
+- Socio-cultural adoption assessment
+- Advanced ML integration for sentiment analysis
 
-### Smart Contract Security
-- **Reentrancy protection** on all state changes
-- **Access control** with role-based permissions
-- **Input validation** for all user data
-- **Emergency pause** functionality
-- **Upgrade patterns** for contract improvements
+### Phase 4: Production
+- Full production deployment
+- Continuous monitoring and improvement
+- Feature expansion based on user feedback
 
-### Privacy Protection
-- **Minimal on-chain data** storage
-- **Encrypted off-chain** storage for sensitive data
-- **ZK proof verification** without data exposure
-- **Data retention policies** compliance
+## Documentation
 
-### Legal Compliance (RA 10175 & RA 10173)
-- **Automated content screening** for potential libel
-- **Evidence requirement** for serious allegations
-- **Data minimization** principles
-- **User consent** mechanisms
-- **Right to deletion** (off-chain data only)
+### Academic Paper
+**[Draft Thesis Paper](https://docs.google.com/document/d/1YW0ZfcUOE9lWjUxkEOlPz-xjho5Aymyy/edit?usp=drive_link&ouid=102460866361677377158&rtpof=true&sd=true)** - Comprehensive academic documentation of the Kanshin Ledger framework, including detailed technical specifications, research methodology, and theoretical foundations.
 
-## 📚 Learning Resources
+## Contributing
 
-### Blockchain Development
-- [Solidity Documentation](https://docs.soliditylang.org/)
-- [Hardhat Tutorial](https://hardhat.org/tutorial/)
-- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
+We welcome contributions to the Kanshin Ledger project! As this is currently a conceptual framework, we're particularly interested in:
 
-### Zero-Knowledge Proofs
-- [ZoKrates Documentation](https://zokrates.github.io/)
-- [Circom & snarkjs](https://docs.circom.io/)
-- [ZK Learning Resources](https://zkp.science/)
+- **Design Feedback**: UX/UI improvements and accessibility suggestions
+- **Technical Architecture**: Blockchain and smart contract design insights
+- **Legal Compliance**: Philippine law expertise and regulatory guidance
+- **Security Auditing**: Cryptographic and privacy protection reviews
 
-### Decentralized Identity
-- [W3C DID Specification](https://www.w3.org/TR/did-core/)
-- [Veramo Framework](https://veramo.io/)
-- [Ceramic Network Docs](https://developers.ceramic.network/)
+### Current Contributors
+- **ESPAÑOLA, CHUCKIE A.** - Project Lead & Architect
 
-This tech stack provides enterprise-grade blockchain infrastructure while maintaining cost-effectiveness for academic research and eventual production deployment.
+## License
+
+This project is currently in the conceptual phase. License details will be determined as the project progresses toward implementation.
+
+---
+
+## Disclaimer
+
+The Kanshin Ledger is a conceptual framework designed for research and educational purposes. This project is not affiliated with any government agency and is intended to demonstrate potential applications of blockchain technology in civic engagement. All references to Philippine laws and regulations are for conceptual design purposes only and do not constitute legal advice.
+
+---
+
+**For questions, suggestions, or collaboration inquiries, please contact the project maintainers.**
