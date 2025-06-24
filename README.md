@@ -1,6 +1,4 @@
-# Kanshin Ledger: Blockchain-Enabled Citizen Governance Platform with Transparent Feedback
-
-> **Status: Conceptual Framework** - Currently in brainstorming and design phase
+<img src="https://readme-typing-svg.herokuapp.com?font=Anaheim&size=32&duration=3000&pause=2000&color=1F51FF&width=1000&lines=Kanshin+Ledger;Blockchain-Enabled+Citizen+Governance+Platform+with+Transparent+Feedback" alt="Typing SVG" />
 
 The Kanshin Ledger is a conceptual blockchain-powered platform designed to enhance transparency, accountability, and citizen participation in local governance, particularly tailored for the Philippine context. This project addresses critical gaps in traditional feedback mechanisms by leveraging decentralized technologies to create a trustworthy and privacy-preserving citizen engagement system.
 
@@ -20,8 +18,6 @@ The Kanshin Ledger is a conceptual framework designed for research and education
 - [Legal & Ethical Compliance](#legal--ethical-compliance)
 - [Current Status](#current-status)
 - [Future Roadmap](#future-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Problem Statement
 
@@ -182,33 +178,9 @@ The platform is designed to comply with key Philippine legislation:
 - Comprehensive performance benchmarking
 - Socio-cultural adoption assessment
 - Advanced ML integration for sentiment analysis
-
-### Phase 4: Production
-- Full production deployment
-- Continuous monitoring and improvement
-- Feature expansion based on user feedback
+- 
 
 ## Documentation
 
 ### Academic Paper
 **[Draft Thesis Paper](https://docs.google.com/document/d/1YW0ZfcUOE9lWjUxkEOlPz-xjho5Aymyy/edit?usp=drive_link&ouid=102460866361677377158&rtpof=true&sd=true)** - Comprehensive academic documentation of the Kanshin Ledger framework, including detailed technical specifications, research methodology, and theoretical foundations.
-
-## Contributing
-
-We welcome contributions to the Kanshin Ledger project! As this is currently a conceptual framework, we're particularly interested in:
-
-- **Design Feedback**: UX/UI improvements and accessibility suggestions
-- **Technical Architecture**: Blockchain and smart contract design insights
-- **Legal Compliance**: Philippine law expertise and regulatory guidance
-- **Security Auditing**: Cryptographic and privacy protection reviews
-
-### Current Contributors
-- **ESPAÑOLA, CHUCKIE A.** - Project Lead & Architect
-
-## License
-
-This project is currently in the conceptual phase. License details will be determined as the project progresses toward implementation.
-
----
-
-**For questions, suggestions, or collaboration inquiries, please contact the project maintainers.**
