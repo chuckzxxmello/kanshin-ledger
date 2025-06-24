@@ -4,6 +4,10 @@
 
 The Kanshin Ledger is a conceptual blockchain-powered platform designed to enhance transparency, accountability, and citizen participation in local governance, particularly tailored for the Philippine context. This project addresses critical gaps in traditional feedback mechanisms by leveraging decentralized technologies to create a trustworthy and privacy-preserving citizen engagement system.
 
+## Disclaimer
+
+The Kanshin Ledger is a conceptual framework designed for research and educational purposes. This project is not affiliated with any government agency and is intended to demonstrate potential applications of blockchain technology in civic engagement. All references to Philippine laws and regulations are for conceptual design purposes only and do not constitute legal advice.
+
 ## Table of Contents
 
 - [Problem Statement](#problem-statement)
@@ -204,12 +208,6 @@ We welcome contributions to the Kanshin Ledger project! As this is currently a c
 ## License
 
 This project is currently in the conceptual phase. License details will be determined as the project progresses toward implementation.
-
----
-
-## Disclaimer
-
-The Kanshin Ledger is a conceptual framework designed for research and educational purposes. This project is not affiliated with any government agency and is intended to demonstrate potential applications of blockchain technology in civic engagement. All references to Philippine laws and regulations are for conceptual design purposes only and do not constitute legal advice.
 
 ---
 
